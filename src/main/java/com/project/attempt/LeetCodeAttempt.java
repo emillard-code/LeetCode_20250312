@@ -15,11 +15,17 @@ public class LeetCodeAttempt {
 
     }
 
+    // This method returns either the count of the positive integers in int[] num, or the count
+    // of the negative integers in int[] num, whichever happens to be higher.
     public static int maximumCountOfPositiveIntegerAndNegativeInteger(int[] nums) {
 
+        // We will use int positive and int negative to
+        // store the count of positive and negative integers.
         int positive = 0;
         int negative = 0;
 
+        // We perform a simple loop and increment either int positive or int negative
+        // each time we find either a positive or negative number respectively.
         for (int i = 0; i < nums.length; i++) {
 
             if (nums[i] > 0) { positive++; }
@@ -27,6 +33,7 @@ public class LeetCodeAttempt {
 
         }
 
+        // At the end, we return the higher of the two counts.
         return Math.max(positive, negative);
 
     }
